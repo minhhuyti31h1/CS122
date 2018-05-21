@@ -6,6 +6,8 @@ using namespace std;
 #define REP(i,n) for (int i=0,_n=(n);i<_n;i++)
 #define DEBUG 1
 #define IS_EVEN(n,m) (n % m ==0 ? 1:0)
+#define max(n,m) (n > m ? n:m)
+#define min(n,m) (n < m ? n:m)
 #define cerr(mess,X) { cout << mess << #X << " = " << (X) << endl; }
 
 int main()
