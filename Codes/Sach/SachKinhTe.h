@@ -40,6 +40,15 @@ public:
 		this -> printtt();
 		cout<<"Gia: "<<this -> tinhGiaSach()<<endl;
 	}
+	friend istream &operator >> (istream &in, SachKinhTe & sth)
+	{
+		cout<<"Ten: ";in>>sth.name;
+		cout<<"NamXB: "; in>>sth.namxb;
+		cout<<"He so: ";in>>sth.heso;
+		cout<<"Gia Nhap: "; in>>sth.gianhap;
+		cout<<"Chiet Khau: "; in>>sth.chietkhau;
+		return in;
+	}
 	~SachKinhTe()
 	{
 

@@ -7,26 +7,49 @@ using namespace std;
 #include "Sach.h"
 #include "SachTinHoc.h"
 #include "SachKinhTe.h"
-
+#define MAX 6
 int main(int argc, char const *argv[])
 {
-	Sach *book[6];
-
-	for (int i = 0; i < 6; ++i)
+	//version THONG THAI (DUNG)
+	Sach *book[MAX];
+	for (int i = 0; i < MAX; ++i)
 	{
-		if(i % 2 == 0)
+		if(i % 2 != 0)
 		{
-			string name = "Sachkt"+to_string(i);
-			book[i] = new SachKinhTe(name,2018+i,0.2,18000,3000);
+			cout<<"Sach Kinh Te "<<i<<endl;
+			SachKinhTe *a = new SachKinhTe();
+			cin>>*a;
+			book[i] = a;
 		}
 		else
 		{
-			string name = "Sachth"+to_string(i);
-			book[i] = new SachTinHoc(name,2018+i,0.2,18000);
-
+			cout<<"Sach Tinh Hoc "<<i<<endl;
+			SachTinHoc *a = new SachTinHoc();
+			cin>>*a;
+			book[i] = a;
 		}
 	}
-	for (int i = 0; i < 6; ++i)
+	//version NGU (SAI)
+	Sach *book[MAX];
+	for (int i = 0; i < MAX; ++i)
+	{
+		if(i % 2 != 0)
+		{
+			cout<<"Sach Kinh Te "<<i<<endl;
+			SachKinhTe a;
+			cin>>a;
+			book[i] = &a;
+		}
+		else
+		{
+			cout<<"Sach Tinh Hoc "<<i<<endl;
+			SachTinHoc a;
+			cin>>a;
+			book[i] = &a;
+		}
+	}
+	cout<<"DONE";
+	for (int i = 0; i <MAX; ++i)
 	{
 		book[i] -> print();
 	}
