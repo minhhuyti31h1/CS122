@@ -24,7 +24,7 @@ int main(int argc, char const *argv[])
 	}
 
 	fstream fout("SanPhamSX.txt",ios::out);
-	fout<<left<<setw(15)<<"Ma San Pham"<<setw(15)<<"Ten San Pham"<<setw(15)<<"Loai San Pham"<<setw(15)<<"Gia San Pham"<<setw(15)<<"Nam san xuat"<<endl;
+	//fout<<left<<"Ma San Pham"<<","<<"Ten San Pham"<<","<<"Loai San Pham"<<","<<"Gia San Pham"<<","<<"Nam san xuat"<<endl;
 	for (int i = 0; i < n; ++i)
 	{
 		fout<<spsx[i]<<endl;

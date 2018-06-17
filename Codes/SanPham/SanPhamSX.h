@@ -62,28 +62,30 @@ public:
 
 	friend istream &operator >> (istream & in, SanPhamSX & sp)
 	{
-		cout<<"MaSP: ";
+		//cout<<"MaSP: ";
 		in>>sp.maSP;
-		cout<<"TenSP: ";
-		in>>sp.tenSP;
-		cout<<"LoaiSP: ";
+		//cout<<"TenSP: ";
+		in.ignore();
+		getline(in,sp.tenSP);
+		//cout<<"LoaiSP: ";
 		in>>sp.loaiSP;
-		cout<<"GiaNL: ";
+		//cout<<"GiaNL: ";
 		in>>sp.giaNL;
-		cout<<"ChiPhiSX: ";
+		//cout<<"ChiPhiSX: ";
 		in>>sp.chiPhiSX;
-		cout<<"NamSX: ";
+		//cout<<"NamSX: ";
 		in>>sp.namSX;
 		return in;
 	}
 
 	friend ostream &operator << (ostream & out, const SanPhamSX & sp)
 	{
-		out<<left<<setw(15)<<sp.maSP;
-		out<<left<<setw(15)<<sp.tenSP;
-		out<<left<<setw(15)<<sp.loaiSP;
-		out<<left<<setw(15)<<sp.tinhGiaSanPham();
-		out<<left<<setw(15)<<sp.namSX;
+		out<<sp.maSP<<endl;
+		out<<sp.tenSP<<endl;
+		out<<sp.loaiSP<<endl;
+		out<<sp.giaNL<<endl;
+		out<<sp.chiPhiSX<<endl;
+		out<<sp.namSX;
 		return out;
 	}
 
