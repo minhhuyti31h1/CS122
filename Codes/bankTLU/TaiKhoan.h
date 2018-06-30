@@ -1,3 +1,8 @@
+#ifndef TAIKHOAN_H
+#define TAIKHOAN_H
+#include <iostream>
+using namespace std;
+#include <string>
 
 class TaiKhoan
 {
@@ -6,7 +11,7 @@ protected:
 	int SoDu;
 public:
 	TaiKhoan(): SoTaiKhoan(""), SoDu(0){}
-	TaiKhoan(string a, int b) : SoTaiKhoan(a), SoDu(b){}
+	TaiKhoan(string stk, int sd) : SoTaiKhoan(stk), SoDu(sd){}
 
 	int getSoDu()const{
 		return this ->SoDu;
@@ -19,14 +24,9 @@ public:
 			this -> SoDu+=a;
 		}
 	}
-	bool KiemTraSoDu()const{
-		return this -> SoDu >0;
-	}
-	void RutTien(int a){
-		if(a >0){
-			this -> SoDu -=a;
-		}
-	}
-	~TaiKhoan();
+	virtual bool RutTien(int sotien) = 0;
+
+	~TaiKhoan(){}
 	
 };
+#endif

@@ -1,20 +1,20 @@
-#include "QuanLyKhachHang.h"
+#include "KhachHang.h"
 #include <iostream>
-#include <string.h>
+#include <string>
 using namespace std;
 
 int main(){
-	QuanLyKhachHang B;
+	KhachHang B;
 
-	B.ThemTaiKhoan("TK", "01244234y4", 2030000, 6.8);
-	B.ThemTaiKhoan("VLai", "34234242424", 728738273, "01244234y4")
-	
+	B.themTaiKhoan("TK", "01244234y4", 2030000, 6.8);
+	B.themTaiKhoan("VLai", "34234242424", 738273);
+	B.lienKetTaiKhoan("34234242424","01244234y4");
 	B.print();
-
+	cout<<endl;
 	///rut tien
-	B.LayTaiKhoan("34234242424") -> RutTien(1000000);
-	B.LayTaiKhoan("34234242424") -> RutTien(10000000);
-	B.LayTaiKhoan("34234242424") -> RutTien(30000000);
-
+	cout<<B.layTaiKhoanvl("34234242424") -> RutTien(1000000);
+	cout<<B.layTaiKhoanvl("34234242424") -> RutTien(1000000);
+	cout<<B.layTaiKhoanvl("34234242424") -> RutTien(3000000)<<endl;
+	B.print();
 
 }

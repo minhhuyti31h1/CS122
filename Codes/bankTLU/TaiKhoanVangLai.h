@@ -1,17 +1,42 @@
+#ifndef TAIKHOANVANGLAI
+#define TAIKHOANVANGLAI
+#include <iostream>
+using namespace std;
+#include <string>
 #include "TaiKhoan.h"
+#include "TaiKhoanTietKiem.h"
 
 class TaiKhoanVangLai : public TaiKhoan
 {
 private :
-	string TaiKhoanLienKet;
+	TaiKhoanTietKiem *TaiKhoanLienKet = NULL;
 public:
-	TaiKhoanVangLai(): TaiKhoan(), TaiKhoanLienKet(""){}
-	TaiKhoanVangLai(string a, int b, string c)
-	: TaiKhoan(a, b), TaiKhoanLienKet(c){}
+	TaiKhoanVangLai(): TaiKhoan(){}
+	TaiKhoanVangLai(string sotk, int sodu)
+	: TaiKhoan(sotk, sodu){}
 
-	void setLienKeTaiKhoan(string Tk){
+	void setLienKetTaiKhoan(TaiKhoanTietKiem *Tk){
 		this -> TaiKhoanLienKet = Tk;
 	}
-	~TaiKhoanVangLai();
+
+	bool RutTien(int sotien){
+		if(sotien > 0){
+			if(this ->SoDu >= sotien)
+			{
+				this -> SoDu -=sotien;
+				return true;
+			}
+			else if(this -> TaiKhoanLienKet != NULL)
+			{
+				int temp = sotien - this -> SoDu;
+				this -> SoDu = 0;
+				return this -> TaiKhoanLienKet -> RutTien(temp);;
+			}
+		}
+		return false;
+	}
+
+	~TaiKhoanVangLai(){}
 	
 };
+#endif
