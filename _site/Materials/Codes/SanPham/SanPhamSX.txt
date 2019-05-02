@@ -1,0 +1,13 @@
+Ma San Pham,Ten San Pham,Loai San Pham,Gia San Pham,Nam san xuat
+BT01
+Banh Quy
+Banh
+15000
+25000
+2015
+BT02
+Banh Gai
+Banh
+250000
+15000
+2019

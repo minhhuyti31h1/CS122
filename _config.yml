@@ -1,1 +1,11 @@
-theme: jekyll-theme-leap-day
+title: CS122 - Object oriented programming in C++
+author: thangdn
+email: thangdn.tlu@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  A Site for Mathematics and Informatics students at Thang Long University.
+
+twitter_username: cstlu
+github_username:  cstlu
+
+sass:
+    style: compressed
