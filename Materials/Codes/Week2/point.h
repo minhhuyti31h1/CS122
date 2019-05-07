@@ -1,3 +1,5 @@
+#ifndef POINT_H
+#define POINT_H
 #include <iostream>
 using namespace std;
 class point
@@ -16,11 +18,4 @@ public:
     double getY()const;
     ~point();
 };
-
-point::point(/* args */):x(0.0),y(0.0)
-{}
-point::point(double x, double y):x(x), y(y)
-{}
-
-point::~point()
-{}
+#endif

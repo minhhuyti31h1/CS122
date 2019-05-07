@@ -1,5 +1,8 @@
+#ifndef RECTANGLE_H
+#define RECTANGLE_H
 #include <iostream>
 using namespace std;
+#include <math.h>
 #include "point.h"
 class rectangle
 {
@@ -8,7 +11,7 @@ private:
     point br;//bot-right
 public:
     rectangle(/* args */);
-    rectangle(point tf, point br);
+    rectangle(const point &, const point &);
     rectangle(double,double,double,double);
     //setters
     bool settf(const point &);
@@ -23,11 +26,4 @@ public:
     double getPerimeter()const;
     ~rectangle();
 };
-
-rectangle::rectangle(/* args */)
-{
-}
-
-rectangle::~rectangle()
-{
-}
+#endif
