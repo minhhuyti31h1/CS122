@@ -1,78 +1,111 @@
 #include <iostream>
 using namespace std;
-
-class Phanso
+class phanso
 {
-    private:
-        int tuso;
-        int mauso;
-    public:
-        Phanso()
-        {
-            this->tuso = 0;
-            this->mauso = 1;
-        }
-        Phanso(int tuso)
-        {
-            this->tuso = tuso;
-            this->mauso = 1;
-        }
-        Phanso(int tuso,int mauso)
-        {
-            this->tuso = tuso;
-            this->mauso = mauso;
-        }
-    
-        //setters
-        void setphanso(int a, int b){
-            this->tuso = a;
-            this->mauso = b;
-        }
-        void setTuso(int cc)
-        {
-            this->tuso = cc;
-        }
-    
-        void setMauso(int ss)
-        {
-            this->mauso = ss;
-        }
-    
-        //getters
-        int getTuso()
-        {
-            return this->tuso;
-        }
-    
-        int getMauso()
-        {
-            return this->mauso;
-        }
-    
-        Phanso operator + (Phanso b)
-        {
-            Phanso kq;
-            kq.setTuso(this->tuso*b.getMauso() + this->mauso*b.getTuso());
-            kq.setMauso(this->mauso*b.getMauso());
-            return kq;
-        }
-
-        void print()
-        {
-            cout<<this->tuso<<"/"<<this->mauso<<endl;
-        }
+	private:
+		int tuso;
+		int mauso;
+	public:
+		//contructor
+		phanso():tuso(0),mauso(1)
+		{}
+		
+		phanso(int tu):tuso(tu),mauso(1)
+		{}
+		
+		phanso(int tu, int mau):tuso(tu),mauso(mau)
+		{}
+		
+		//setters
+		void setTuso(int tu)
+		{
+			this->tuso = tu;
+		}
+		void setMauso(int mau)
+		{
+			this->mauso = mau;
+		}
+		
+		//getters
+		int getTuso() const
+		{
+			return this->tuso;
+		}
+		
+		int getMauso() const
+		{
+			return this->mauso;
+		}
+		
+		//methods
+		phanso operator +(const phanso &b) const
+		{
+			phanso kq;
+			kq.tuso = this->tuso*b.mauso + this->mauso*b.tuso;
+			kq.mauso = this->mauso * b.mauso;
+			return kq;
+		}
+		
+		friend phanso operator + (int a, const phanso &b)
+		{
+			return phanso(a*b.mauso + b.tuso,b.mauso);
+		}
+		
+		void operator += (const phanso &b)
+		{
+			this -> tuso = this->tuso*b.mauso + this->mauso*b.tuso;
+			this -> mauso=this->mauso * b.mauso;
+		}
+		
+		bool operator == (const phanso &b)
+		{
+			return this-> tuso*b.mauso == this ->mauso*b.tuso;
+		}
+		
+		phanso operator ++ (int)// A++
+		{
+			cout<<"A++"<<endl;
+			phanso a(this->tuso,this->mauso);
+			this -> tuso = this -> tuso  + this -> mauso;
+			return a;
+		}
+		
+		phanso operator ++ ()// ++A
+		{
+			cout<<"++A"<<endl;
+			this -> tuso = this -> tuso  + this -> mauso;
+			return phanso(this->tuso,this->mauso);
+		}
+		friend istream &operator >>(istream & in, phanso &b)
+		{
+			cout<<"Moi ban nhap tu so: ";
+			in>>b.tuso;
+			cout<<"Moi ban nhap mau so: ";
+			in>>b.mauso;
+			
+			return in;
+		}
+		
+		friend ostream &operator <<(ostream & out,const phanso &b)
+		{
+			out<<b.tuso<<"/"<<b.mauso<<endl;
+			return out;
+		}
+		
+		operator float()
+		{
+		    return this->tuso/(float)this->mauso;
+		}
+		operator int()
+		{
+		    return this->tuso/this->mauso;
+		}
+		
 };
-
 
 int main()
 {
-    Phanso S(1);
-    int n;
-    cin>>n;
-    for (int i = 2; i <= n; ++i)
-    {
-        S = S + Phanso(1,i);
-    }
-    S.print();
-    return 0;
+	phanso a(5,4),b;
+	phanso c = 10 + a;
+	cout<<(int)c;
 }

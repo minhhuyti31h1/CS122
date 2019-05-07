@@ -1,16 +1,38 @@
+#include <string>
 #include <iostream>
-#include <math.h>
 using namespace std;
-#include "sophuc.h"
+#include <fstream>
+#include "CanBo.h"
+#include "GiangVien.h"
+#include "NhanVienHanhChinh.h"
+#define MAX 100
 int main()
 {
-	sophuc a(3);
-	int n;
-	cin>>n;
-	for (int i= 1; i<= n ; i++)
+	CanBo * dscb[MAX];
+	int chon;
+	int n = 0;
+	do
 	{
-		a= a + sophuc(0, i);
+		cout << "1. Nhap giang vien." << endl;
+		cout << "2. Nhap nhan vien hanh chinh." << endl;
+		cout << "3. Thoat." << endl;
+		cin >> chon;
+		if (chon == 1)
+		{
+			GiangVien *a = new GiangVien();
+			cin >> *a;
+			dscb[n] = a;
+		}else if (chon == 2)
+		{
+			NhanVienHanhChinh *a = new NhanVienHanhChinh();
+			cin >> *a;
+			dscb[n] = a;
+		}
+		n++;
+	}while (chon != 3);
+	for (int i = 0; i < n; i++)
+	{
+		dscb[i]->print();
 	}
-	cout<<a.modul()<<endl;
-	return 0;
+	cin >> n;
 }
