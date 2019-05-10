@@ -1,15 +1,17 @@
 #include <iostream>
 #include "rectangle.h"
+#include "circle.h"
 #include "point.h"
 using namespace std;
 int main()
 {
-    point a;
-    a.setX(4.0);
-    a.setY(6.0);
     point b(2,2);
-    rectangle c(a,b);
+    circle c;
+    c.setI(b);
+    c.setr(5);
     cout<<c.getArea()<<endl;
     cout<<c.getPerimeter()<<endl;
-
+    c.set(3,3,5);
+    cout<<c.getArea()<<endl;
+    cout<<c.getPerimeter()<<endl;
 }

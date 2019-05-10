@@ -13,7 +13,12 @@ public:
     circle();
     circle(point I,double r);
     circle(double x,double y, double r);
-    ~circle();
+    void set(double x, double y, double r)
+    {
+        this -> I.setX(x);
+        this -> I.setY(y);
+        this -> r = r;
+    }
     void setI(const point &I );
     void setr(double r);
     double getr()const;
