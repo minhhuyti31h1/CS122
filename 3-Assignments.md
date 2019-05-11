@@ -25,7 +25,15 @@ permalink: /assignments/
                   <td>Homework#2:Phanso, Time, Point, Rectangle,Circel, triangle</td>
                   <td></td>
                   <td><a href="{{ "https://classroom.github.com/a/ah8267tg" | relative_url }}">Submit</a></td>
-                  <td>May 14, 19</td>
+                  <td>May 15, 19</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td></td>
+                  <td>Homework#3:<a href="https://www.dropbox.com/s/4brhall6bucnbvq/CS122.zip?dl=0">Analysis and design problems's class-diagram in OOPs</a></td>
+                  <td></td>
+                  <td><a href="{{ "https://classroom.github.com/a/LFMes4A1" | relative_url }}">Submit</a></td>
+                  <td>May 18, 19</td>
                 </tr>
                 <!--<tr>
                   <td rowspan="2">1</td>

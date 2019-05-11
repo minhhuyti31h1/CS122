@@ -6,9 +6,10 @@
 using namespace std;
 class Human
 {
-protected:
+private:
     string fullname;
     bool sex;
+protected:
     Date DOB;
 public:
     Human(/* args */);
