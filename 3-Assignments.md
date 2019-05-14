@@ -33,7 +33,7 @@ permalink: /assignments/
                   <td>Homework#3:<a href="https://www.dropbox.com/s/4brhall6bucnbvq/CS122.zip?dl=0">Analysis and design problems's class-diagram in OOPs</a></td>
                   <td></td>
                   <td><a href="{{ "https://classroom.github.com/a/LFMes4A1" | relative_url }}">Submit</a></td>
-                  <td>May 18, 19</td>
+                  <td>May 17, 19</td>
                 </tr>
                 <tr>
                   <td>3</td>
@@ -41,7 +41,7 @@ permalink: /assignments/
                   <td>Homework#4:Complete <a href="https://github.com/cstlu/CS122/tree/master/Materials/Codes/Dathuc">DaThuc</a> and <a href="https://github.com/cstlu/CS122/tree/master/Materials/Codes/Week3-TH">NhanVien</a></td>
                   <td></td>
                   <td><a href="{{ "https://classroom.github.com/a/Tr-caFVW" | relative_url }}">Submit</a></td>
-                  <td>May 25, 19</td>
+                  <td>May 24, 19</td>
                 </tr>
                 <!--<tr>
                   <td rowspan="2">1</td>
