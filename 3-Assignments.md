@@ -35,6 +35,14 @@ permalink: /assignments/
                   <td><a href="{{ "https://classroom.github.com/a/LFMes4A1" | relative_url }}">Submit</a></td>
                   <td>May 18, 19</td>
                 </tr>
+                <tr>
+                  <td>3</td>
+                  <td></td>
+                  <td>Homework#3:Complete <a href="https://github.com/cstlu/CS122/tree/master/Materials/Codes/Dathuc">DaThuc</a> and <a href="https://github.com/cstlu/CS122/tree/master/Materials/Codes/Week3-TH">NhanVien</a></td>
+                  <td></td>
+                  <td><a href="{{ "https://classroom.github.com/a/Tr-caFVW" | relative_url }}">Submit</a></td>
+                  <td>May 18, 19</td>
+                </tr>
                 <!--<tr>
                   <td rowspan="2">1</td>
                   <td>Dec 3, 18</td>
