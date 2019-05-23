@@ -8,9 +8,11 @@ public:
 	NhanVienHHDB();
 	NhanVienHHDB(string, string, string,double, double, double);
 	//setter;
+	void setbase_salary(double base);
 
 	//getter;
-
+	double getbase_salary()const;
+	double getSalary()const;
 	//methods
 	double getSalary()const
 	{
